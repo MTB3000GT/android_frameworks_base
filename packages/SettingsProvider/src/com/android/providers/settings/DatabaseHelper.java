@@ -78,7 +78,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // database gets upgraded properly. At a minimum, please confirm that 'upgradeVersion'
     // is properly propagated through your change.  Not doing so will result in a loss of user
     // settings.
-    private static final int DATABASE_VERSION = 117;
+    private static final int DATABASE_VERSION = 118;
 
     private static final String HEADSET = "_headset";
     private static final String SPEAKER = "_speaker";
@@ -1900,7 +1900,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             upgradeVersion = 116;
         }
 
-       if (upgradeVersion == 117) {
+        if (upgradeVersion == 117) {
             db.beginTransaction();
             SQLiteStatement stmt = null;
             try {
@@ -1912,6 +1912,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 if (stmt != null) stmt.close();
             }
             upgradeVersion = 117;
+        }
+
+        if (upgradeVersion == 118) {
+            moveSettingsToNewTable(db, TABLE_SYSTEM, TABLE_SECURE,
+                    new String[] { Settings.Secure.VOLUME_LINK_NOTIFICATION }, true);
+            upgradeVersion = 118;
         }
 
         // *** Remember to update DATABASE_VERSION above!

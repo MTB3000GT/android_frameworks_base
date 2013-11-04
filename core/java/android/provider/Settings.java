@@ -1258,6 +1258,7 @@ public final class Settings {
             MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_PING_COUNT);
             MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_PING_DELAY_MS);
             MOVED_TO_SECURE.add(Secure.WIFI_WATCHDOG_PING_TIMEOUT_MS);
+            MOVED_TO_SECURE.add(Secure.VOLUME_LINK_NOTIFICATION);
 
             // At one time in System, then Global, but now back in Secure
             MOVED_TO_SECURE.add(Secure.INSTALL_NON_MARKET_APPS);
@@ -6406,6 +6407,13 @@ public final class Settings {
          * @hide
          */
         public static final String DEFAULT_THEME_COMPONENTS = "default_theme_components";
+
+        /**
+         * Boolean value whether to link ringtone and notification volume
+         *
+         * @hide
+         */
+        public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
 
         /**
          * This will be set to the system's current theme API version when ThemeService starts.
