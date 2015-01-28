@@ -3720,6 +3720,18 @@ public final class Settings {
          * @hide
          */
         public static final String RECENTS_MAX_APPS = "recents_max_apps";
+		
+	/**
+         * Whether to show the weather info on the lock screen
+         * @hide
+         */
+        public static final String LOCK_SCREEN_SHOW_WEATHER = "lock_screen_show_weather";
+
+        /**
+         * Whether to show the weather location lock screen
+         * @hide
+         */
+        public static final String LOCK_SCREEN_SHOW_WEATHER_LOCATION = "lock_screen_show_weather_location";		
 
         /**
          * Whether recent panel gravity is left or right (default = Gravity.RIGHT).
