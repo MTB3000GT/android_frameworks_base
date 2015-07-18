@@ -68,6 +68,8 @@
     <!-- Expanded Status Bar Battery Level Text Color -->
     <color name="status_bar_battery_level_text_color">#ffffff</color>
 
-    <!-- Background of the volume panel. See also: volume_dialog_background -->
+    <!-- Expanded Status Bar Battery Level Text Color -->
     <color name="volume_panel_background_color">@color/system_secondary_color</color>
+    
+    <color name="notification_icon_color">#FFFFFFFF</color>
 </resources>
